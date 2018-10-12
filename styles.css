@@ -1,0 +1,255 @@
+body {
+  background: url(images/bg.jpg);
+  background-size: cover;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: lighter;
+  transition: all 0.5s ease-in;
+}
+.main{
+  height: 100%;
+  margin: auto;
+}
+
+.addCity {
+  background: linear-gradient(to left, #333, #555);
+  border-radius: 15px;
+  position: relative;
+  top: 20px;
+  width: 80%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.enterCity {
+  height: 44px;
+  left: 20px;
+  font-size: 16px;
+  border-radius: 12px 0 0 12px;
+  border: 0;
+  flex-grow : 1;
+  padding: 0;
+  margin: 15px 0 15px 15px;
+   padding-left: 20px;
+}
+
+.buttonAdd {
+  height: 44px;
+  float: left;
+  border-radius: 0 12px 12px 0;
+  width: 60px;
+  font-size: 20px;
+  background: #A8A8A7;
+  color: white;
+  border: 0;
+  margin: 15px 15px 15px 0;
+}
+
+.containerCell {
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  background-size: cover;
+  color: white;
+}
+
+
+.templateCell {
+  display: none;
+}
+
+.frameCity {
+  position: relative;
+  top: 80px;
+}
+
+.list {
+  font-weight: lighter;
+  list-style: none;
+  width: 80%;
+  left: 10%;
+  position: relative;;
+  text-align: center;
+  margin: 0; /* To remove default bottom margin */
+  padding: 40px 0px 350px 0px ; /* To remove default left padding */
+}
+
+.list li {
+  margin-bottom:25px;
+  position: relative;
+  animation: new-item-animation .3s linear forwards;
+}
+
+.list .containerCell {
+  min-height: 250px;
+  top: 40px;
+  display: flex;
+  flex-grow : 1;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flexItem {
+  float: left;
+  margin: 0 5px;
+}
+
+.list .name {
+  font-size: 32px;
+}
+
+.list .temperature {
+  font-size: 36px;
+}
+
+.list .infoBlock {
+  font-size: 20px;
+  text-align: left;
+}
+
+.buttonDelete {
+  height: 46px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border: 0;
+  width: 90px;
+  float: right;
+}
+
+
+.widget {
+  height: 250px;
+  width: 400px;
+  bottom: 60px;
+  left: 30px;
+  position: fixed;
+  opacity: 0.9;
+  transition: all .5s ease-in;
+  -webkit-transition: background-image .5s linear;
+  -moz-transition: background-image .5s linear;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget .title {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+  left: 5%;
+  float: left;
+}
+
+.widget .description {
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  bottom: 20px;
+  width: 90%;
+  left: 5%;
+  float: right;
+}
+
+.widget .temperature {
+  position: relative;
+  margin: auto;
+  float: right;
+  width: 90%;
+  right: 5%;
+  text-align: right;
+  font-size: 40px;
+}
+
+
+@media screen and (max-width:990px) {
+  .list .checker { flex-basis: 5%;}
+  .list .name {  float: left;}
+  .list .temperature {  float: right;}
+  .list .infoBlock {  float: left;}
+  .list {
+    width: 90%;
+    left: 5%;
+  }
+
+  .addCity {
+    width: 90%;
+    left: 5%;
+  }
+
+}
+
+
+@media screen and (max-width:500px){
+  .list .containerCell {
+     flex-wrap: column;
+     flex-flow: row wrap-reverse;
+     flex-direction: column;
+     justify-content: flex-start;
+  }
+ .list {
+    padding-bottom: 50px;
+  }
+  .widget {
+    width: 90%;
+    left: 5%;
+    opacity: 1;
+    position: relative;
+    max-width: 400px;
+  }
+  .flexItem {
+    /* width: 100%; */
+    column-count: 1;
+    margin-left: 20px;
+  }
+
+  .list .infoBlock {  float: left;}
+  .list .checker {
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-right: auto;
+  }
+  .list .name {
+      margin-left: 45px;
+      margin-top: -26px;
+      margin-right: auto;
+  }
+  .list .temperature {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  .list .infoBlock {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    flex-wrap: wrap;
+  }
+  .list .buttonDelete {
+    margin-left: auto;
+    /* margin-top: -60px; */
+    margin-bottom: 20px;
+    margin-right: auto;
+  }
+
+
+}
+
+
+@keyframes new-item-animation {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-400px);
+    -ms-transform: translateY(-400px);
+    -o-transform: translateY(-400px);
+    transform: translateY(-400px)
+  }
+
+  to {
+    opacity: 1;
+    transform : translateY(0);
+  }
+}

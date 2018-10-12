@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Weather</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="addCity">
+      <input class="enterCity" id ="addCityInput">
+      <button class="buttonAdd" id ="addCityButton">Add!</button>
+    </div>
+    <ul id ="mainList" class="list">
+      <li class="cell templateCell">
+        <div class="informAboutCity containerCell">
+          <input class="checker flexItem" type="radio" name="mainCity"/>
+          <div class="name flexItem"></div>
+          <div class="temperature flexItem"></div>
+          <ul class="infoBlock flexItem">
+            <p class="description"></p>
+            <p class="wind"></p>
+            <p class="humidity"></p>
+          </ul>
+          <button class="buttonDelete flexItem">Delete</button>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+  <div class="widget containerCell" id ="widget">
+    <p class="title">Your city:</p>
+    <p class="temperature"></p>
+    <p class="description"></p>
+  </div>
+</body>
+</html>
